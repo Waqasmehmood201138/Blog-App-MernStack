@@ -1,18 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
-import SigninPage from './component/SigninPage';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import  LoginPage  from './Auth/LoginPage';
+import SignupPage from './Auth/SignupPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        {/* <p>
-          Love to Share Knowledege
-        </p> */}
-      </header>
-      <SigninPage/>
-    </div>
+    <>
+      
+
+      <BrowserRouter>
+      <Routes>
+
+        <Route path='/' element={<LoginPage />} />
+        <Route path='/signup' element={<SignupPage/>} />
+
+      </Routes>
+      </BrowserRouter>
+
+    </>
   );
 }
 
