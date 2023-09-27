@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom'
 import './HomePage.css'
 import home from '../asset/blog_home.webp'
 import MainNavbar from '../navbar/MainNavbar'
+import CategoriesBar from '../navbar/CategoriesBar'
 
 
 export default function HomePage() {
     return (
         <>
-        <MainNavbar/>
+        <MainNavbar/><CategoriesBar/>
             <div className="container-fluid bg-dark">
                 <div className="container">
                     <div className="row p-5">
