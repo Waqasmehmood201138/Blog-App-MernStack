@@ -1,0 +1,16 @@
+.main_head{
+    color: #ec8cf6;
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    font-size: 38px;
+}
+.main_para{
+    font-size: 21px;
+    color: #b6deea;
+}
+.main_button{
+    background-color: #e154fa;
+}
+.main_button:hover{
+    background-color: #d385e0;
+}
