@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 
 export default function CategoriesBar() {
 
@@ -19,7 +20,7 @@ export default function CategoriesBar() {
                 <div className="container">
                     <div className="row p-3">
                         {isSearchActive ?
-                            (<>
+                            (<> 
                                 <div className="col-10">
                                     <form action="" className='d-flex justify-content-center'>
                                         <input type="text" className='form-control' />
@@ -28,7 +29,7 @@ export default function CategoriesBar() {
                                 </div></>)
                             :
                             (<><div className="col-2 book_cat">Free Tech Books</div>
-                                <div className="col categories_name">JavaScript</div>
+                                <div className="col categories_name"><Link className='categories_name ' to='jspage'>JavaScript</Link></div>
                                 <div className="col-2 categories_name">HTML & CSS</div>
                                 <div className="col categories_name">AI</div>
                                 <div className="col categories_name">Java</div>

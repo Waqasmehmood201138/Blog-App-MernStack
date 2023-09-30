@@ -1,6 +1,6 @@
 import React from 'react'
 import './firstcard.css'
-import img from '../../asset/firstcardrightpic.webp'
+// import img from '../../asset/firstcardrightpic.webp'
 import Postcards from '../2ndcards/Postcards'
 
 const Firstcard = () => {

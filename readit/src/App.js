@@ -11,6 +11,7 @@ import Firstcard from './cards/firstcard/Firstcard';
 import Footer from './footer/Footer';
 
 import JsPage from './categoryBarPages/JsPage';
+import CategoriesBar from './navbar/CategoriesBar';
 
 
 function App() {
@@ -19,20 +20,22 @@ function App() {
       
 
       <BrowserRouter>
+      <MainNavbar/>
+      <CategoriesBar/>
       <Routes>
 
-        <Route path='/' element={<LoginPage />} />
+        <Route path='/login' element={<LoginPage />} />
         <Route path='/signup' element={<SignupPage/>} />
-        <Route path='/mainnavbar' element={<MainNavbar />}/>
-        <Route path='/homepage' element={<HomePage/>}/>
+        {/* <Route path='/mainnavbar' element={<MainNavbar />}/> */}
+        <Route path='/' element={<HomePage/>}/>
         <Route path='/card' element={<Firstcard/>}/>
-
-        <Route path='/footer' element={<Footer/>}/>
-
         <Route path='/jspage' element={<JsPage/>}/>
 
 
+
+
       </Routes>
+        <Footer/>
       </BrowserRouter>
 
     </>
