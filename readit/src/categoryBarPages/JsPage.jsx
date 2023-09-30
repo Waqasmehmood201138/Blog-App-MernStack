@@ -7,11 +7,11 @@ const JsPage = () => {
     return (
         <> 
                 {/* start of vertical cards */}
-            <div className='container-fluid js_page d-flex align-items-center justify-content-center'>
-                <div className="container  p-3 d-flex justify-content-center">
+            <div className='container-fluid js_page d-flex align-items-center justify-content-center '>
+                <div className="container  p-3 d-flex justify-content-center ">
                     <div className="row">
                         <div className='col-lg-3 '>
-                            <div className="card full_card ">
+                            <div className="card full_card my-4 ">
                                 <div className="img">
                                     <img className='card-img-top img-fluid ' src={img1} alt="" srcset="" />
                                 </div>
@@ -24,7 +24,7 @@ const JsPage = () => {
                             </div>
                         </div>
                         <div className='col-lg-3 '>
-                            <div className="card full_card ">
+                            <div className="card full_card  my-4 ">
                                 <div className="img">
                                     <img className='card-img-top img-fluid ' src={img1} alt="" srcset="" />
                                 </div>
@@ -37,7 +37,7 @@ const JsPage = () => {
                             </div>
                         </div>
                         <div className='col-lg-3 '>
-                            <div className="card full_card ">
+                            <div className="card full_card  my-4 ">
                                 <div className="img">
                                     <img className='card-img-top img-fluid ' src={img1} alt="" srcset="" />
                                 </div>
@@ -50,7 +50,7 @@ const JsPage = () => {
                             </div>
                         </div>
                         <div className='col-lg-3 '>
-                            <div className="card full_card ">
+                            <div className="card full_card  my-4 ">
                                 <div className="img">
                                     <img className='card-img-top img-fluid ' src={img1} alt="" srcset="" />
                                 </div>
@@ -192,7 +192,17 @@ const JsPage = () => {
             </div>
                     {/* end of horizantal cards */}
 
-                    {/* todo pagination */}
+                    {/* start of  pagination */}
+
+                    <div className="container d-flex justify-content-center align-items-center mb-5">
+                        <div className="pagination">
+                        <div className="prev fw-bold text-secondary"> Prev</div>
+                        <div className="numbers text-primary fw-bold">&nbsp;&nbsp;&nbsp;&nbsp; <span className='one'>1</span>  &nbsp;&nbsp; 2 &nbsp;&nbsp; 3 &nbsp;&nbsp; 4 &nbsp;&nbsp; ... &nbsp;&nbsp; 95</div>
+                        <div className="next fw-bold text-primary">&nbsp;&nbsp;&nbsp;&nbsp;  Next </div>
+                        </div>
+                    </div>
+
+                    {/* end of  pagination */}
 
         </>
     )
