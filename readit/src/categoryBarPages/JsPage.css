@@ -4,6 +4,7 @@
 }
 .full_card{
     cursor: pointer;
+    transition: all .5s ease;
 }
 .full_card:hover{
     border: .5px solid  #a2a2a2;
