@@ -4,10 +4,13 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
+    text-decoration: none;
+    color: black;
 
 }
 .categories_name:hover{
     color: #e154fa;
+    
 }
 .book_cat{
     color: #7232fa;

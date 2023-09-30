@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { Link } from 'react-router-dom'
 export default function SignupPage() {
     const [username,setUsername] = useState("")
     const [email,setEmail] = useState("")
@@ -56,7 +56,7 @@ export default function SignupPage() {
 
                             <p className="signup-link">
                                 Already Registered ?
-                                <a href="/"> Login</a>
+                                <Link to="/login"> Sign in</Link>
                             </p>
                         </form>
 

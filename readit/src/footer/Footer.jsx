@@ -25,7 +25,7 @@ const Footer = () => {
 
      <div className="container-fluid custom-footer">
         <div className="row">
-            <div className="col-5 d-flex  align-items-center">
+            <div className="col-5 d-flex  align-items-center ">
             <p className='custom-space fw-bold fs-3 '>ReadIt.</p>
             <p className='custom-space '><BsGithub/></p>
             <p className='custom-space '><BsInstagram/></p>
