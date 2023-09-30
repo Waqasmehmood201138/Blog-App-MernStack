@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.custom-footer{
+    width: 100%;
+    /* height: 100px; */
+    background-color:#525056 ;
+    color: white;
+}
+.custom-space {
+    margin-left: 45px;
+}
