@@ -20,3 +20,15 @@
 .release_date{
     color: #a2a2a2;
 }
+.pagination{
+    cursor: pointer;
+}
+.numbers:hover{
+    color: black;
+}
+.one{
+    background-color: #a2a2a2;
+    padding: 4px;
+    color: black;
+    border-radius: 30px;
+}
