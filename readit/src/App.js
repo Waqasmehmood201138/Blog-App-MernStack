@@ -7,7 +7,11 @@ import SignupPage from './Auth/SignupPage';
 import MainNavbar from './navbar/MainNavbar';
 import HomePage from './HomePage/HomePage';
 import Firstcard from './cards/firstcard/Firstcard';
+
 import Footer from './footer/Footer';
+
+import JsPage from './categoryBarPages/JsPage';
+
 
 function App() {
   return (
@@ -22,7 +26,11 @@ function App() {
         <Route path='/mainnavbar' element={<MainNavbar />}/>
         <Route path='/homepage' element={<HomePage/>}/>
         <Route path='/card' element={<Firstcard/>}/>
+
         <Route path='/footer' element={<Footer/>}/>
+
+        <Route path='/jspage' element={<JsPage/>}/>
+
 
       </Routes>
       </BrowserRouter>

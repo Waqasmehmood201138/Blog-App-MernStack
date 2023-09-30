@@ -1,0 +1,34 @@
+.js_page{
+    background-color: #f6b33c;
+    /* height: 50vh; */
+}
+.full_card{
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.full_card:hover{
+    border: .5px solid  #a2a2a2;
+    transform: scale(1.03);
+}
+.card_footer{
+    color: #a2a2a2;
+    font-weight: bold;
+}
+.card_footer:hover{
+    color: #f6b33c;
+}
+.release_date{
+    color: #a2a2a2;
+}
+.pagination{
+    cursor: pointer;
+}
+.numbers:hover{
+    color: black;
+}
+.one{
+    background-color: #a2a2a2;
+    padding: 4px;
+    color: black;
+    border-radius: 30px;
+}
