@@ -10,8 +10,9 @@ import Firstcard from './cards/firstcard/Firstcard';
 
 import Footer from './footer/Footer';
 
-import JsPage from './categoryBarPages/JsPage';
-import CategoriesBar from './navbar/CategoriesBar';
+import JsPage from './categoryBarPages/javascript/JsPage';
+// import CategoriesBar from './navbar/CategoriesBar';s
+import Htmlcss from './categoryBarPages/htmlcss/Htmlcss';
 
 
 function App() {
@@ -21,9 +22,10 @@ function App() {
 
       <BrowserRouter>
       <MainNavbar/>
-      <CategoriesBar/>
+      {/* <CategoriesBar/> */}
       <Routes>
 
+        <Route path='/htmlcss' element={<Htmlcss/>}/>
         <Route path='/login' element={<LoginPage />} />
         <Route path='/signup' element={<SignupPage/>} />
         {/* <Route path='/mainnavbar' element={<MainNavbar />}/> */}

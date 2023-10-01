@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
      </div> */}
 
-     <div className="container-fluid custom-footer">
+     <div className="container-fluid custom-footer bg-dark">
         <div className="row">
             <div className="col-5 d-flex  align-items-center ">
             <p className='custom-space fw-bold fs-3 '>ReadIt.</p>
