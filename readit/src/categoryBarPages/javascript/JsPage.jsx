@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './JsPage.css';
-import img1 from '../asset/jspageimg1.webp'
+import img1 from '../../asset/jspageimg1.webp'
+import CategoriesBar from '../../navbar/CategoriesBar';
 
 const JsPage = () => {
     return (
         <> 
+        <CategoriesBar/>
                 {/* start of vertical cards */}
             <div className='container-fluid js_page d-flex align-items-center justify-content-center '>
                 <div className="container  p-3 d-flex justify-content-center ">

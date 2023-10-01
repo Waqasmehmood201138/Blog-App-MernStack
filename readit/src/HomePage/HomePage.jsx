@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './HomePage.css'
 import home from '../asset/blog_home.webp'
 // import MainNavbar from '../navbar/MainNavbar'
-// import CategoriesBar from '../navbar/CategoriesBar'
+import CategoriesBar from '../navbar/CategoriesBar'
 // import Footer from '../footer/Footer'
 import Firstcard from '../cards/firstcard/Firstcard'
 
@@ -11,7 +11,8 @@ import Firstcard from '../cards/firstcard/Firstcard'
 export default function HomePage() {
     return (
         <>
-        
+                {/* <MainNavbar/> */}
+                <CategoriesBar/>
             <div className="container-fluid bg-dark">
                 <div className="container">
                     <div className="row p-5">
