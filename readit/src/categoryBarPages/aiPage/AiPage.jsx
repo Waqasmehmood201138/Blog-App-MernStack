@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import './htmlcss.css';
+import './AiPage.css';
 import img1 from '../../asset/jspageimg1.webp'
 import CategoriesBar from '../../navbar/CategoriesBar';
 
-const Htmlcss = () => {
+const AiPage = () => {
     return (
 
         <> <CategoriesBar />
             {/* start of vertical cards */}
-            <div className='container-fluid htmlcss_page d-flex align-items-center justify-content-center '>
+            <div className='container-fluid ai_page d-flex align-items-center justify-content-center '>
                 <div className="container  p-3 d-flex justify-content-center ">
                     <div className="row">
                         <div className='col-lg-3 '>
@@ -72,7 +72,7 @@ const Htmlcss = () => {
 
             {/* start of JS section */}
             <div className="container ">
-                <h1 className='pt-5 display-4 fw-bold'>HTML | CSS</h1>
+                <h1 className='pt-5 display-4 fw-bold'>AI</h1>
                 <div>
                     <Link to="/vanillajs"><button className='btn fw-bold btn-secondary m-2 '>Vanilla JS</button></Link>
                     <Link to="/react"><button className='btn fw-bold btn-secondary m-2 '>React </button></Link>
@@ -210,4 +210,4 @@ const Htmlcss = () => {
     )
 }
 
-export default Htmlcss
+export default AiPage
