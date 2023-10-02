@@ -6,9 +6,9 @@ import CategoriesBar from '../../navbar/CategoriesBar';
 
 const Htmlcss = () => {
     return (
-        
-        <> <CategoriesBar/>
-                {/* start of vertical cards */}
+
+        <> <CategoriesBar />
+            {/* start of vertical cards */}
             <div className='container-fluid js_page d-flex align-items-center justify-content-center '>
                 <div className="container  p-3 d-flex justify-content-center ">
                     <div className="row">
@@ -67,12 +67,12 @@ const Htmlcss = () => {
                     </div>
                 </div>
             </div>
-                    {/* end of vertical cards */}
+            {/* end of vertical cards */}
 
 
-                    {/* start of JS section */}
+            {/* start of JS section */}
             <div className="container ">
-                <h1 className='pt-5 display-4 fw-bold'>JavaScript</h1>
+                <h1 className='pt-5 display-4 fw-bold'>HTML | CSS</h1>
                 <div>
                     <Link to="/vanillajs"><button className='btn fw-bold btn-secondary m-2 '>Vanilla JS</button></Link>
                     <Link to="/react"><button className='btn fw-bold btn-secondary m-2 '>React </button></Link>
@@ -91,9 +91,9 @@ const Htmlcss = () => {
                     <Link to="/apis"><button className='btn fw-bold btn-secondary m-2 '>APIs</button></Link>
                 </div>
             </div>
-                        {/* end of JS section  */}
-                        
-                            {/* start of horizental cards  */}
+            {/* end of JS section  */}
+
+            {/* start of horizental cards  */}
             <div className="container pt-5 p-3">
                 <div className="card  full_card my-5">
                     <div className="row">
@@ -104,7 +104,7 @@ const Htmlcss = () => {
                             <div className="card-body">
                                 <h5 className="card-title fw-bold title">An Introduction to the Bun JavaScript Runtime</h5>
                                 <div>
-                                      <span className='language_used card_footer'>JavaScript</span>  <span className='card_author dot card_footer'>By Craig Buckler,</span> <span className='release_date'> Sep 26 </span>
+                                    <span className='language_used card_footer'>JavaScript</span>  <span className='card_author dot card_footer'>By Craig Buckler,</span> <span className='release_date'> Sep 26 </span>
                                 </div>
                                 <p className="card-text">Learn about Bun 1.0, a rival JavaScript runtime to Node.js and Deno, and the reasons it may tempt you away from your current favorite.</p>
                             </div>
@@ -120,7 +120,7 @@ const Htmlcss = () => {
                             <div className="card-body">
                                 <h5 className="card-title fw-bold title">An Introduction to the Bun JavaScript Runtime</h5>
                                 <div>
-                                      <span className='language_used card_footer'>JavaScript</span>  <span className='card_author dot card_footer'>By Craig Buckler,</span> <span className='release_date'> Sep 26 </span>
+                                    <span className='language_used card_footer'>JavaScript</span>  <span className='card_author dot card_footer'>By Craig Buckler,</span> <span className='release_date'> Sep 26 </span>
                                 </div>
                                 <p className="card-text">Learn about Bun 1.0, a rival JavaScript runtime to Node.js and Deno, and the reasons it may tempt you away from your current favorite.</p>
                             </div>
@@ -136,7 +136,7 @@ const Htmlcss = () => {
                             <div className="card-body">
                                 <h5 className="card-title fw-bold title">An Introduction to the Bun JavaScript Runtime</h5>
                                 <div>
-                                      <span className='language_used card_footer'>JavaScript</span>  <span className='card_author dot card_footer'>By Craig Buckler,</span> <span className='release_date'> Sep 26 </span>
+                                    <span className='language_used card_footer'>JavaScript</span>  <span className='card_author dot card_footer'>By Craig Buckler,</span> <span className='release_date'> Sep 26 </span>
                                 </div>
                                 <p className="card-text">Learn about Bun 1.0, a rival JavaScript runtime to Node.js and Deno, and the reasons it may tempt you away from your current favorite.</p>
                             </div>
@@ -152,7 +152,7 @@ const Htmlcss = () => {
                             <div className="card-body">
                                 <h5 className="card-title fw-bold title">An Introduction to the Bun JavaScript Runtime</h5>
                                 <div>
-                                      <span className='language_used card_footer'>JavaScript</span>  <span className='card_author dot card_footer'>By Craig Buckler,</span> <span className='release_date'> Sep 26 </span>
+                                    <span className='language_used card_footer'>JavaScript</span>  <span className='card_author dot card_footer'>By Craig Buckler,</span> <span className='release_date'> Sep 26 </span>
                                 </div>
                                 <p className="card-text">Learn about Bun 1.0, a rival JavaScript runtime to Node.js and Deno, and the reasons it may tempt you away from your current favorite.</p>
                             </div>
@@ -168,7 +168,7 @@ const Htmlcss = () => {
                             <div className="card-body">
                                 <h5 className="card-title fw-bold title">An Introduction to the Bun JavaScript Runtime</h5>
                                 <div>
-                                      <span className='language_used card_footer'>JavaScript</span>  <span className='card_author dot card_footer'>By Craig Buckler,</span> <span className='release_date'> Sep 26 </span>
+                                    <span className='language_used card_footer'>JavaScript</span>  <span className='card_author dot card_footer'>By Craig Buckler,</span> <span className='release_date'> Sep 26 </span>
                                 </div>
                                 <p className="card-text">Learn about Bun 1.0, a rival JavaScript runtime to Node.js and Deno, and the reasons it may tempt you away from your current favorite.</p>
                             </div>
@@ -184,7 +184,7 @@ const Htmlcss = () => {
                             <div className="card-body">
                                 <h5 className="card-title fw-bold title">An Introduction to the Bun JavaScript Runtime</h5>
                                 <div>
-                                      <span className='language_used card_footer'>JavaScript</span>  <span className='card_author dot card_footer'>By Craig Buckler,</span> <span className='release_date'> Sep 26 </span>
+                                    <span className='language_used card_footer'>JavaScript</span>  <span className='card_author dot card_footer'>By Craig Buckler,</span> <span className='release_date'> Sep 26 </span>
                                 </div>
                                 <p className="card-text">Learn about Bun 1.0, a rival JavaScript runtime to Node.js and Deno, and the reasons it may tempt you away from your current favorite.</p>
                             </div>
@@ -192,19 +192,19 @@ const Htmlcss = () => {
                     </div>
                 </div>
             </div>
-                    {/* end of horizantal cards */}
+            {/* end of horizantal cards */}
 
-                    {/* start of  pagination */}
+            {/* start of  pagination */}
 
-                    <div className="container d-flex justify-content-center align-items-center mb-5">
-                        <div className="pagination">
-                        <div className="prev fw-bold text-secondary"> Prev</div>
-                        <div className="numbers text-primary fw-bold">&nbsp;&nbsp;&nbsp;&nbsp; <span className='one'>1</span>  &nbsp;&nbsp; 2 &nbsp;&nbsp; 3 &nbsp;&nbsp; 4 &nbsp;&nbsp; ... &nbsp;&nbsp; 95</div>
-                        <div className="next fw-bold text-primary">&nbsp;&nbsp;&nbsp;&nbsp;  Next </div>
-                        </div>
-                    </div>
+            <div className="container d-flex justify-content-center align-items-center mb-5">
+                <div className="pagination">
+                    <div className="prev fw-bold text-secondary"> Prev</div>
+                    <div className="numbers text-primary fw-bold">&nbsp;&nbsp;&nbsp;&nbsp; <span className='one'>1</span>  &nbsp;&nbsp; 2 &nbsp;&nbsp; 3 &nbsp;&nbsp; 4 &nbsp;&nbsp; ... &nbsp;&nbsp; 95</div>
+                    <div className="next fw-bold text-primary">&nbsp;&nbsp;&nbsp;&nbsp;  Next </div>
+                </div>
+            </div>
 
-                    {/* end of  pagination */}
+            {/* end of  pagination */}
 
         </>
     )
