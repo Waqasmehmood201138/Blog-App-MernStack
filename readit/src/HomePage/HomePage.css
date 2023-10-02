@@ -1,6 +1,9 @@
+.container-fluid{
+    font-family: 'Poppins';
+}
 .main_head{
     color: #ec8cf6;
-    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Poppins';
     font-weight: 900;
     font-size: 38px;
 }

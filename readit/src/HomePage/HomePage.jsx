@@ -11,8 +11,8 @@ import Firstcard from '../cards/firstcard/Firstcard'
 export default function HomePage() {
     return (
         <>
-                {/* <MainNavbar/> */}
-                <CategoriesBar/>
+
+            <CategoriesBar />
             <div className="container-fluid bg-dark">
                 <div className="container">
                     <div className="row p-5">
@@ -27,8 +27,8 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
-            <Firstcard/>
-            {/* <Footer/> */}
+            <Firstcard />
+
         </>
     )
 }
