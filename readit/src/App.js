@@ -10,6 +10,7 @@ import Firstcard from './cards/firstcard/Firstcard';
 import Footer from './footer/Footer';
 import JsPage from './categoryBarPages/javascript/JsPage';
 import Htmlcss from './categoryBarPages/htmlcss/Htmlcss';
+import AiPage from './categoryBarPages/aiPage/AiPage';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path='/card' element={<Firstcard />} />
           <Route path='/jspage' element={<JsPage />} />
           <Route path='/htmlcss' element={<Htmlcss />} />
+          <Route path='/aipage' element={<AiPage />} />
 
 
 
