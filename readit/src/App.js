@@ -11,6 +11,11 @@ import Footer from './footer/Footer';
 import JsPage from './categoryBarPages/javascript/JsPage';
 import Htmlcss from './categoryBarPages/htmlcss/Htmlcss';
 import AiPage from './categoryBarPages/aiPage/AiPage';
+import Java from './categoryBarPages/java/Java';
+import Wordpress from './categoryBarPages/wordpress/Wordpress';
+import Php from './categoryBarPages/php/Php';
+import Python from './categoryBarPages/python/Python';
+
 
 
 function App() {
@@ -29,6 +34,10 @@ function App() {
           <Route path='/jspage' element={<JsPage />} />
           <Route path='/htmlcss' element={<Htmlcss />} />
           <Route path='/aipage' element={<AiPage />} />
+          <Route path='/java' element={<Java />} />
+          <Route path='/wordpress' element={<Wordpress />} />
+          <Route path='/php' element={<Php />} />
+          <Route path='/python' element={<Python />} />
 
 
 

@@ -29,15 +29,22 @@ export default function CategoriesBar() {
                                 </div></>)
                             :
                             (<><div className="col-2 book_cat">Free Tech Books</div>
-                                <div className="col categories_name"><Link className='categories_name ' to='/jspage'>JavaScript</Link></div>
-                                <div className="col-2 categories_name"><Link className='categories_name' to='/htmlcss'>HTML&CSS</Link></div>
-                                <div className="col categories_name"><Link className='categories_name' to='/aipage'>AI</Link></div>
-                                <div className="col categories_name">Java</div>
-                                <div className="col categories_name">Wordpress</div>
-                                <div className="col categories_name">PHP</div>
-                                <div className="col categories_name">Python</div>
+                                <div className="col categories_name">
+                                    <Link className='categories_name ' to='/jspage'>JavaScript</Link></div>
+                                <div className="col-2 categories_name">
+                                    <Link className='categories_name' to='/htmlcss'>HTML&CSS</Link></div>
+                                <div className="col categories_name">
+                                    <Link className='categories_name' to='/aipage'>AI</Link></div>
+                                <div className="col categories_name">
+                                    <Link to='/java' className='categories_name'>Java</Link></div>
+                                <div className="col categories_name">
+                                    <Link to='/wordpress' className='categories_name'>Wordpress</Link></div>
+                                <div className="col categories_name">
+                                    <Link to='/php' className='categories_name'>Php</Link></div>
+                                <div className="col categories_name">
+                                    <Link to='/python' className='categories_name'>Python</Link></div>
 
-                                <div className="col btn btn-secondary" onClick={handleSearch}>Search</div>
+                                <div className="col btn btn-secondary " onClick={handleSearch}>Search</div>
                             </>)
                         }
 
