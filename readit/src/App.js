@@ -15,13 +15,14 @@ import Java from './categoryBarPages/java/Java';
 import Wordpress from './categoryBarPages/wordpress/Wordpress';
 import Php from './categoryBarPages/php/Php';
 import Python from './categoryBarPages/python/Python';
+import VanillaJsPage from './VanillaJs/VanillaJsPage';
+
 
 
 
 function App() {
   return (
     <>
-
 
       <BrowserRouter>
         <MainNavbar />
@@ -38,6 +39,7 @@ function App() {
           <Route path='/wordpress' element={<Wordpress />} />
           <Route path='/php' element={<Php />} />
           <Route path='/python' element={<Python />} />
+          <Route path='/vanillajs' element={<VanillaJsPage />} />
 
 
 
