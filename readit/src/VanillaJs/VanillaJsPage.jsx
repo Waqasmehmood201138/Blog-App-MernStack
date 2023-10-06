@@ -2,10 +2,12 @@ import React from 'react'
 import VerticalCards from './VerticalCards'
 import './VanillaJsPage.css'
 import HorizantalCards from './HorizantalCards'
+import CategoriesBar from '../navbar/CategoriesBar'
 
 const VanillaJsPage = () => {
     return (
         <>
+        < CategoriesBar/>
             <div className=' container-fluid vanilla_js d-flex align-items-center justify-content-center'>
                 <div className="container d-flex justify-content-center">
                     <div className="row">
