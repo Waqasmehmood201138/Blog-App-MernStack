@@ -1,16 +1,48 @@
 import React, { useState } from 'react'
 import './Auth.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 
 export default function LoginPage() {
+
+    const navigate = useNavigate()
+
     const [email,setEmail]= useState("")
     const [password,setPassword]= useState("")
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
+
         e.preventDefault()
+
         console.log(email,password)
         setEmail(email)
         setPassword(password)
+
+        const data = {
+
+            email : email,
+            password : password 
+        }
+
+        try {
+
+            const responce = await axios.post('http://localhost:8081/user/login' , data)
+
+            if(responce.status === 200){
+
+                toast.success(responce.data)
+                navigate('/')
+            }
+            else{
+                toast.error(responce.data)
+            }
+        } catch (error) {
+            
+            console.log(error)
+        }
+
+
     }
     return (
         <>

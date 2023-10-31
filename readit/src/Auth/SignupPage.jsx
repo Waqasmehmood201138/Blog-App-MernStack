@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify';
 
 export default function SignupPage() {
+
+    const navigate = useNavigate();
+
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -35,8 +38,9 @@ export default function SignupPage() {
             if (responce.status === 201) {
 
                 toast.success('Sign up success');
+                navigate('/')
             }
-            
+
         }
         catch (err) {
             console.log(err)
@@ -79,7 +83,7 @@ export default function SignupPage() {
                                     onChange={(e) => { setPassword(e.target.value) }} />
                             </div>
                             <button type="submit" className="submit">
-                                Sign in
+                                Sign me up
                             </button>
 
                             <p className="signup-link">
