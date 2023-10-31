@@ -17,7 +17,8 @@ import Php from './categoryBarPages/php/Php';
 import Python from './categoryBarPages/python/Python';
 import VanillaJsPage from './VanillaJs/VanillaJsPage';
 
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
 
       <BrowserRouter>
         <MainNavbar />
+        <ToastContainer />
         <Routes>
 
           <Route path='/login' element={<LoginPage />} />

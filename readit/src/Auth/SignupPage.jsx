@@ -1,21 +1,53 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-export default function SignupPage() {
-    const [username,setUsername] = useState("")
-    const [email,setEmail] = useState("")
-    const [password,setPassword] = useState("")
+import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify';
 
-   
-    const handleSubmit=(e) => {
+export default function SignupPage() {
+
+    const navigate = useNavigate();
+
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
+
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log(username)
+
+        console.log(name)
         console.log(email)
         console.log(password)
-        
-        setUsername(username)
+
+        setName(name)
         setEmail(email)
         setPassword(password)
+
+        const data = {
+            name: name,
+            email: email,
+            password: password
+        };
+
+        try {
+
+            const responce = await axios.post('http://localhost:8081/user/signup', data)
+
+            console.log("data send")
+
+            if (responce.status === 201) {
+
+                toast.success('Sign up success');
+                navigate('/')
+            }
+
+        }
+        catch (err) {
+            console.log(err)
+            toast.error('email already exist')
+        }
     }
+
     return (
         <>
             <div className="container-fluid d-flex justify-content-center align-items-center vh-100 custom_container">
@@ -26,32 +58,32 @@ export default function SignupPage() {
                         <form className="form" onSubmit={handleSubmit}>
                             <p className="form-title">Register With Us.</p>
                             <div className="input-container">
-                                <input 
-                                type="text"
-                                 placeholder="Enter Your Name"
-                                 value={username} 
-                                 onChange={(e)=>{setUsername(e.target.value)}}/>
-                                <span>
-                                </span>
-                            </div>
-                            <div className="input-container">
-                                <input 
-                                type="email"
-                                 placeholder="Enter email"
-                                 value={email}
-                                 onChange={(e)=>{setEmail(e.target.value)}} />
+                                <input
+                                    type="text"
+                                    placeholder="Enter Your Name"
+                                    value={name}
+                                    onChange={(e) => { setName(e.target.value) }} />
                                 <span>
                                 </span>
                             </div>
                             <div className="input-container">
                                 <input
-                                 type="password"
-                                  placeholder="Enter password"
-                                  value={password} 
-                                  onChange={(e)=>{setPassword(e.target.value)}}/>
+                                    type="email"
+                                    placeholder="Enter email"
+                                    value={email}
+                                    onChange={(e) => { setEmail(e.target.value) }} />
+                                <span>
+                                </span>
+                            </div>
+                            <div className="input-container">
+                                <input
+                                    type="password"
+                                    placeholder="Enter password"
+                                    value={password}
+                                    onChange={(e) => { setPassword(e.target.value) }} />
                             </div>
                             <button type="submit" className="submit">
-                                Sign in
+                                Sign me up
                             </button>
 
                             <p className="signup-link">
