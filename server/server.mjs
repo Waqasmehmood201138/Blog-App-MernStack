@@ -2,7 +2,7 @@ import express from "express"
 import cors from "cors"
 import mongoose from "mongoose"
 import userRoute from "./routes/User.mjs"
-import blogRoute from "./routes/blog.mjs"
+import blogRoute from "./routes/Blog.mjs"
 
 
 const app = express()
@@ -13,7 +13,7 @@ const PORT = 8081;
 
 
 app.use("/user" , userRoute)  // route that's for the user signup and login only ...
-app.use("/blogs" , blogRoute) // route that is for the blog crud operation only  ...
+app.use("/blog" , blogRoute) // route that is for the blog crud operation only  ...
 
 app.listen(PORT , () => {
 

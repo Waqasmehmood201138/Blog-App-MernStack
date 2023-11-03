@@ -1,4 +1,5 @@
 import express from "express";
+import bcrypt from "bcrypt"
 const userRoute = express.Router();
 import User from "../models/User.mjs";
 
@@ -35,36 +36,28 @@ userRoute.post("/signup", async (req, res) => {
 // Created User End 
 
 // Authenticate / Login User code start
-
 userRoute.post('/login', async (req, res) => {
-
     try {
+        const { email, password } = req.body;
+        const user = await User.findOne({ email });
 
-        const { email , password } = req.body;
-
-        const check = await User.findOne({ email })
-
-        if (check) {
-
-            if(check.password === password)
-
-            {
-            return res.status(200).send("Login Success")
-            }
-
-            else{
-                return res.status(401).send("Invalid Credential")
-            }
-        }
-        else {
-            return res.status(401).send("No Data Found")
+        if (!user) {
+            return res.status(401).send("No Data Found");
         }
 
+        // Compare the hashed password with the provided password
+        // const passwordMatch = await bcrypt.compare(password, user.password);
+
+        if (user.password === password) {
+            return res.status(200).send("Login Success");
+        } else {
+            return res.status(401).send("Invalid Credentials");
+        }
     } catch (error) {
-        console.log(error)
+        console.error(error);
+        return res.status(500).send("Internal Server Error");
     }
-
-})
+});
 
 // Authenticate / Login User code end
 

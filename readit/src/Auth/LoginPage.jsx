@@ -8,41 +8,51 @@ export default function LoginPage() {
 
     const navigate = useNavigate()
 
-    const [email,setEmail]= useState("")
-    const [password,setPassword]= useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
 
     const handleSubmit = async (e) => {
 
         e.preventDefault()
 
-        console.log(email,password)
+        console.log(email, password)
         setEmail(email)
         setPassword(password)
 
         const data = {
 
-            email : email,
-            password : password 
+            email: email,
+            password: password
         }
 
         try {
 
-            const responce = await axios.post('http://localhost:8081/user/login' , data)
+            const responce = await axios.post('http://localhost:8081/user/login', data)
 
-            if(responce.status === 200){
+            if (responce.data === "Login Success") {
 
                 toast.success(responce.data)
                 navigate('/')
             }
-            else{
-                toast.error(responce.data)
-            }
+
+            //    else if ( responce.status === 401) 
+            //     {
+            //         toast.error("Invalid Credentials")
+            //         console.log(responce.data)
+            //     }
+
         } catch (error) {
-            
-            console.log(error)
+
+            // toast.error(error.message)
+            // console.log(error.message)
+
+            if (error.response && error.response.status === 401) {
+                toast.error("Invalid Credentials")
+            }
+            else if (error.responce && error.response.status === 500) {
+                toast.error("Internal Server Error")
+            }
         }
-
-
     }
     return (
         <>
@@ -55,25 +65,25 @@ export default function LoginPage() {
                         <form className="form" onSubmit={handleSubmit}>
                             <p className="form-title">Sign in to your account</p>
                             <div className="input-container">
-                                <input 
-                                type="email" 
-                                placeholder="Enter email"
-                                value={email}
-                                onChange={(e)=>{setEmail(e.target.value)}} />
+                                <input
+                                    type="email"
+                                    placeholder="Enter email"
+                                    value={email}
+                                    onChange={(e) => { setEmail(e.target.value) }} />
                                 <span>
                                 </span>
                             </div>
                             <div className="input-container">
-                                <input 
-                                type="password"
-                                 placeholder="Enter password"
-                                 value={password}
-                                 onChange={(e)=>{setPassword(e.target.value)}} />
+                                <input
+                                    type="password"
+                                    placeholder="Enter password"
+                                    value={password}
+                                    onChange={(e) => { setPassword(e.target.value) }} />
                             </div>
                             <button
-                             type="submit" 
-                             className="submit" 
-                             >
+                                type="submit"
+                                className="submit"
+                            >
                                 Sign in
                             </button>
 
