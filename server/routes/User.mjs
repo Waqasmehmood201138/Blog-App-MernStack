@@ -42,16 +42,16 @@ userRoute.post('/login', async (req, res) => {
         const user = await User.findOne({ email });
 
         if (!user) {
-            return res.status(401).send("No Data Found");
+            return res.status(401).json({message: "No Data Found"});
         }
 
         // Compare the hashed password with the provided password
         // const passwordMatch = await bcrypt.compare(password, user.password);
 
         if (user.password === password) {
-            return res.status(200).send("Login Success");
+            return res.status(200).json({message: "Login Success"});
         } else {
-            return res.status(401).send("Invalid Credentials");
+            return res.status(401).json({message: "Invalid Credentials"});
         }
     } catch (error) {
         console.error(error);

@@ -19,6 +19,8 @@ import VanillaJsPage from './VanillaJs/VanillaJsPage';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AdminHomePage from './adminAccess/AdminHomePage';
+import AddBlogForm from './adminAccess/AddBlogForm';
 
 
 function App() {
@@ -30,6 +32,7 @@ function App() {
         <ToastContainer />
         <Routes>
 
+          {/* Public Routes */}
           <Route path='/login' element={<LoginPage />} />
           <Route path='/signup' element={<SignupPage />} />
           <Route path='/' element={<HomePage />} />
@@ -43,6 +46,11 @@ function App() {
           <Route path='/python' element={<Python />} />
           <Route path='/vanillajs' element={<VanillaJsPage />} />
 
+
+          {/* Private Routes */}
+
+          <Route path='/admin' element={ <AdminHomePage/> } />
+          <Route path='/admin/add-blog' element={ <AddBlogForm/> } />
 
 
 

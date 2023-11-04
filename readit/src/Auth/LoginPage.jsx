@@ -27,11 +27,11 @@ export default function LoginPage() {
 
         try {
 
-            const responce = await axios.post('http://localhost:8081/user/login', data)
+            const response = await axios.post('http://localhost:8081/user/login', data)
 
-            if (responce.data === "Login Success") {
+            if (response.data.message === "Login Success") {
 
-                toast.success(responce.data)
+                toast.success(response.data.message)
                 navigate('/')
             }
 
@@ -46,12 +46,16 @@ export default function LoginPage() {
             // toast.error(error.message)
             // console.log(error.message)
 
-            if (error.response && error.response.status === 401) {
-                toast.error("Invalid Credentials")
+            if (error.response && error.response.data.message === "Invalid Credentials") {
+                toast.error(error.response.data.message)
             }
-            else if (error.responce && error.response.status === 500) {
-                toast.error("Internal Server Error")
+            else if (error.response && error.response.data.message === "No Data Found") {
+                toast.error(error.response.data.message)
             }
+            else if (error.response && error.response.data.message === "Internal Server Error") {
+                toast.error(error.response.data.message)
+            }
+            
         }
     }
     return (
