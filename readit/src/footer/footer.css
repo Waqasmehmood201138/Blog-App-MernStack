@@ -5,8 +5,7 @@
 }
 .custom-footer{
     width: 100%;
-    /* height: 100px; */
-   
+    /* margin-top: calc(100vh - 43vh); */
     color: white;
 }
 .custom-space {

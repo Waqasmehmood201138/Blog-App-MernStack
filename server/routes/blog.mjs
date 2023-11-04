@@ -4,12 +4,29 @@ import Blog from "../models/Blog.mjs"
 
 
 
-blogRoute.get("/" , (req , res) => {
+// Finding All Blog Code start Here 
 
-    res.send("Get All Blogs Route ....")
+blogRoute.get("/allBlogs" , async(req, res) => {
+
+    try {
+
+        const Blogs = await Blog.find();
+
+        if(Blogs.length === 0){
+
+            return res.status(404).json({message: "No Blogs Found"})
+        }
+
+        return res.status(200).json(Blogs)
+        
+    } catch (error) {
+        console.log(error)
+    }
 })
 
-// Creating Blog code start
+// Finding All Blog Code end Here 
+
+// Creating Blog code start here
 blogRoute.post("/createBlog" , async(req , res) => {
 
     try {
@@ -41,6 +58,9 @@ blogRoute.post("/createBlog" , async(req , res) => {
     }
    
 })
-// Creating Blog code end
+// Creating Blog code end here
+
+
+
 
 export default blogRoute;
