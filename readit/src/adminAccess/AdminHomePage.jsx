@@ -6,22 +6,25 @@ export default function AdminHomePage() {
 
     const [blogs, setblogs] = useState([])
 
+    // Get All Blog From DB
     const getAllBlogs = async () => {
-
         try {
 
             const { data } = await axios.get('http://localhost:8081/blog/allBlogs')
-
             console.log(data)
             setblogs(data);
-            // console.log()
-
-            // getAllBlogs();
 
         } catch (error) {
 
             console.log(error)
         }
+    }
+
+    // Delete Specified Blog
+
+    const deleteBlog = (id) => {
+
+        console.log(id)
     }
 
     useEffect(() => {
@@ -39,9 +42,9 @@ export default function AdminHomePage() {
                         <h1>Admin Panel | Blogs</h1>
                         <Link to="/admin/add-blog" className='btn btn-primary'>Create New Blog</Link>
                     </div>
-                        <div className="col-12">
-                            <hr />
-                        </div>
+                    <div className="col-12">
+                        <hr />
+                    </div>
                     <div className="col-12 mt-4">
 
                         <table className="table">
@@ -64,7 +67,7 @@ export default function AdminHomePage() {
                                             <td>{element.category}</td>
                                             <td className='d-flex justify-content-center gap-2'>
                                                 <Link to className='btn btn-info'>Edit</Link>
-                                                <Link to className='btn btn-danger'>Delete</Link>
+                                                <Link to className='btn btn-danger' onClick={e => deleteBlog(element._id)}>Delete</Link>
                                             </td>
                                         </tr>
                                     )
