@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 export default function AdminHomePage() {
 
@@ -10,7 +11,7 @@ export default function AdminHomePage() {
     const getAllBlogs = async () => {
         try {
 
-            const { data } = await axios.get('http://localhost:8081/blog/allBlogs')
+            const { data } = await axios.get('http://localhost:8081/blog/all-Blogs')
             console.log(data)
             setblogs(data);
 
@@ -21,12 +22,31 @@ export default function AdminHomePage() {
     }
 
     // Delete Specified Blog
+    const deleteBlog = async(id) => {
 
-    const deleteBlog = (id) => {
+        try {
 
-        console.log(id)
+            const response = await axios.delete(`http://localhost:8081/blog/delete-Blog/${id}`);
+
+            if(response.status === 200){
+                toast.success(response.data.message)
+            }
+            
+        } catch (error) {
+            
+            if(error.response && error.response.status === 401){
+                toast.error(error.response.data.message)
+            }
+
+            else if(error.response && error.response.status === 500){
+                toast.error(error.response.data.message)
+            }
+        }
+
+        getAllBlogs();
     }
 
+// Here we rendering the all blog when the page load
     useEffect(() => {
 
         getAllBlogs();

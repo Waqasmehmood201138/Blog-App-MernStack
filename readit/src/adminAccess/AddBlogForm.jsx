@@ -51,7 +51,7 @@ export default function AddBlogForm() {
 
         try {
 
-            const newBlogResponse = await axios.post('http://localhost:8081/blog/createBlog' , newBlogData)
+            const newBlogResponse = await axios.post('http://localhost:8081/blog/create-Blog' , newBlogData)
 
             console.log("Blog data send")
 

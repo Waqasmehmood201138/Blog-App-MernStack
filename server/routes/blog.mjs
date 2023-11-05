@@ -6,7 +6,7 @@ import Blog from "../models/Blog.mjs"
 
 // Finding All Blog Code start Here 
 
-blogRoute.get("/allBlogs", async (req, res) => {
+blogRoute.get("/all-Blogs", async (req, res) => {
 
     try {
 
@@ -27,7 +27,7 @@ blogRoute.get("/allBlogs", async (req, res) => {
 // Finding All Blog Code end Here 
 
 // Creating Blog code start here
-blogRoute.post("/createBlog", async (req, res) => {
+blogRoute.post("/create-Blog", async (req, res) => {
 
     try {
 
@@ -60,20 +60,25 @@ blogRoute.post("/createBlog", async (req, res) => {
 })
 // Creating Blog code end here
 
-// Delete Blog code start here
 
-blogRoute.delete("/deleteblog" , async(req , res) => {
+// Delete Blog code start here
+blogRoute.delete("/delete-blog/:id" , async(req , res) => {
     
     try {
 
-        // const deleteBlog = await Blog.findByIdAndDelete(req.params.id)
-        res.send("delete Blog route ...")
+        const deleteBlog = await Blog.findByIdAndDelete(req.params.id)
+        
+        if(!deleteBlog){
+
+            return res.send(401).json({message: "Content Not Available"})
+        }
+
+        return res.status(200).json({message: "Blog Deleted!"})
         
     } catch (error) {
-        console.log(error)
+        return res.status(500).json(error.message)
     }
 })
-
 // Delete Blog code end here
 
 
