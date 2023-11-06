@@ -62,25 +62,55 @@ blogRoute.post("/create-Blog", async (req, res) => {
 
 
 // Delete Blog code start here
-blogRoute.delete("/delete-blog/:id" , async(req , res) => {
-    
+blogRoute.delete("/delete-blog/:id", async (req, res) => {
+
     try {
 
         const deleteBlog = await Blog.findByIdAndDelete(req.params.id)
-        
-        if(!deleteBlog){
 
-            return res.send(401).json({message: "Content Not Available"})
+        if (!deleteBlog) {
+
+            return res.send(401).json({ message: "Content Not Available" })
         }
 
-        return res.status(200).json({message: "Blog Deleted!"})
-        
+        return res.status(200).json({ message: "Blog Deleted!" })
+
     } catch (error) {
         return res.status(500).json(error.message)
     }
 })
 // Delete Blog code end here
 
+
+// How to edit Blog ...code start here
+
+blogRoute.put("/update-blog/:id", async (req, res) => {
+
+    try {
+        const updateBlog = await Blog.updateOne(
+            { _id: req.params.id },
+
+            {
+                $set: {
+                    title: req.body.title,
+                    description: req.body.description,
+                    category: req.body.category,
+                    author: req.body.author
+                }
+            }
+        )
+
+        if (!updateBlog) {
+            return res.status(404).json({ message: "Sorry! This Blog is not Available" })
+        }
+
+        return res.status(200).json({ message: "Blog Updated!" })
+    } catch (error) {
+        return res.status(400).json({ error: error.message })
+    }
+})
+
+// How to edit Blog ...code end here
 
 
 export default blogRoute;

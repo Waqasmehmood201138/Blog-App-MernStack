@@ -21,6 +21,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AdminHomePage from './adminAccess/AdminHomePage';
 import AddBlogForm from './adminAccess/AddBlogForm';
+import UpdateBlogForm from './adminAccess/UpdateBlogForm';
 
 
 function App() {
@@ -51,7 +52,7 @@ function App() {
 
           <Route path='/admin' element={ <AdminHomePage/> } />
           <Route path='/admin/add-blog' element={ <AddBlogForm/> } />
-
+          <Route path='/admin/update-blog' element={ <UpdateBlogForm/> } />
 
 
         </Routes>

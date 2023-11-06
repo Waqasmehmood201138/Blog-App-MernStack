@@ -1,9 +1,15 @@
 import { React, useState, useEffect } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { Link , useNavigate} from 'react-router-dom'
 import { toast } from 'react-toastify'
 
+import { AiFillEdit } from 'react-icons/ai'
+import { RiDeleteBin6Fill } from 'react-icons/ri'
+
+
 export default function AdminHomePage() {
+
+    const navigate = useNavigate();
 
     const [blogs, setblogs] = useState([])
 
@@ -46,6 +52,14 @@ export default function AdminHomePage() {
         getAllBlogs();
     }
 
+    const handleEdit = (element) => {
+
+        navigate('/admin/update-blog', {
+            state: element
+        })
+
+    }
+
 // Here we rendering the all blog when the page load
     useEffect(() => {
 
@@ -86,8 +100,8 @@ export default function AdminHomePage() {
                                             <td>{element.author}</td>
                                             <td>{element.category}</td>
                                             <td className='d-flex justify-content-center gap-2'>
-                                                <Link to className='btn btn-info'>Edit</Link>
-                                                <Link to className='btn btn-danger' onClick={e => deleteBlog(element._id)}>Delete</Link>
+                                                <button className='btn btn-info' onClick={e => handleEdit(element)}><AiFillEdit /></button>
+                                                <Link to="/admin" className='btn btn-danger' onClick={e => deleteBlog(element._id)}><RiDeleteBin6Fill /></Link>
                                             </td>
                                         </tr>
                                     )
